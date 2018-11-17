@@ -7,7 +7,8 @@ input = sys.argv[1:]
 input = [int(i) for i in input]
 
 def function(x,y):
-	
+	squares = [j**2 for j in range(x,y+1)]
+	return(sum(squares))
 
-print(scipy.stats.norm(input[0], input[1]).pdf(input[2]))
-print(scipy.stats.norm(input[0], input[1]).cdf(input[2]))
+ss = function(input[0],input[1])
+print(ss)
